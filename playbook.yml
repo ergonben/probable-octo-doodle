@@ -1,0 +1,9 @@
+- name: Lay foundation
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: Install Caddy
+      become: true
+      ansible.builtin.apt:
+        name: caddy
+        update_cache: true
